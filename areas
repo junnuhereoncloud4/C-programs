@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+    float radius,height,base,length,pi=3.14,breadth;
+    char area_type;
+    printf("enter area type (circle-c,rectangle-r,triangle-t,sqaure-s)");
+    scanf(" %c",&area_type);
+    switch(area_type)
+    {
+        case 'c':
+            printf("enter radius");
+            scanf("%f",&radius);
+            printf("area of circle :=%f",pi*radius*radius);
+            break;
+        case 'r':
+            printf("enter length and breadth"); 
+            scanf("%f%f",&length,&breadth);
+            printf("area of rectangle :=%f",length*breadth);        
+            break;
+        case 't':
+            printf("enter base and height"); 
+            scanf("%f%f",&base,&height);
+            printf("area of triangle :=%f",0.5*base*height);
+            break;
+        case 's':
+            printf("enter side length");        
+            scanf("%f",&length);
+            printf("area of square :=%f",length*length);
+            break;
+        default:
+            printf("invalid area type");
+            
+
+    }
+    return 0;
+
+}
